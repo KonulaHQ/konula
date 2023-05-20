@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: django-app-test
+  labels:
+    app: django-app
+spec:
+  type: LoadBalancer
+  selector:
+    app: django
+  ports:
+    - port: 8000
+      targetPort: 8000

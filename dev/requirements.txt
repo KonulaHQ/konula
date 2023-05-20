@@ -1,0 +1,11 @@
+
+dj-rest-auth==2.2.5
+Django==4.1.4
+
+djangorestframework==3.14.0
+
+gunicorn==20.1.0
+
+requests==2.27.1
+kubernetes
+PyYAML

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-runner-deployment
+  labels:
+    app: test-runner
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-runner
+  template:
+    metadata:
+      labels:
+        app: test-runner
+    spec:
+      containers:
+      - name: test-runner
+        image: python:3.9-slim
+        ports:
+        - containerPort: 80
